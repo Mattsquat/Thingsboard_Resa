@@ -1,0 +1,37 @@
+{
+  "entityType" : "ENTITY_GROUP",
+  "entity" : {
+    "additionalInfo" : null,
+    "configuration" : {
+      "columns" : [ {
+        "type" : "ENTITY_FIELD",
+        "key" : "created_time",
+        "sortOrder" : "DESC"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "title",
+        "sortOrder" : "NONE"
+      } ],
+      "settings" : { },
+      "actions" : { }
+    },
+    "edgeGroupAll" : false,
+    "externalId" : null,
+    "groupAll" : true,
+    "id" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "7a228d60-3b07-11f0-9464-dd129eb04c6d"
+    },
+    "name" : "All",
+    "ownerId" : {
+      "entityType" : "TENANT",
+      "id" : "7a15e330-3b07-11f0-9464-dd129eb04c6d"
+    },
+    "type" : "DASHBOARD"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "groupEntities" : true
+}

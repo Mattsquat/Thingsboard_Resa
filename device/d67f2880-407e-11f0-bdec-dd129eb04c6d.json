@@ -1,0 +1,88 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "7a28cef0-3b07-11f0-9464-dd129eb04c6d"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "d67f2880-407e-11f0-bdec-dd129eb04c6d"
+    },
+    "label" : "",
+    "name" : "Scada",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "NkB1hoRH9ImGXUmwrfbq",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1749625075898,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1749625075898,
+      "longValue" : 1749625075896,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1749624432689,
+      "longValue" : 1749624432569,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1749624432387,
+      "longValue" : 1749624432387,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1749624432576,
+      "longValue" : 1749624432576,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

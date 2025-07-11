@@ -1,0 +1,88 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "7a28cef0-3b07-11f0-9464-dd129eb04c6d"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "01def110-4073-11f0-b971-355c7b7ccee6"
+    },
+    "label" : "",
+    "name" : "ReseauDistribution",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "Hq43lXTPbZ5lDVUyLjj4",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1749625100933,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1749625100933,
+      "longValue" : 1749625100928,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1749624483676,
+      "longValue" : 1749624482026,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1749624481844,
+      "longValue" : 1749624481844,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1749624482041,
+      "longValue" : 1749624482041,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
