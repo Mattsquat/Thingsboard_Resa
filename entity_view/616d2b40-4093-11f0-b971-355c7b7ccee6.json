@@ -1,0 +1,41 @@
+{
+  "entityType" : "ENTITY_VIEW",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "endTimeMs" : 0,
+    "entityId" : {
+      "entityType" : "DEVICE",
+      "id" : "dbd03470-4072-11f0-b971-355c7b7ccee6"
+    },
+    "externalId" : {
+      "entityType" : "ENTITY_VIEW",
+      "id" : "616d2b40-4093-11f0-b971-355c7b7ccee6"
+    },
+    "keys" : {
+      "attributes" : {
+        "cs" : null,
+        "sh" : null,
+        "ss" : null
+      },
+      "timeseries" : null
+    },
+    "name" : "EntityStockageBP",
+    "startTimeMs" : 0,
+    "type" : "TypeEntityStockageBP",
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "id" : {
+      "entityType" : "ENTITY_VIEW",
+      "id" : "616d2b40-4093-11f0-b971-355c7b7ccee6"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
