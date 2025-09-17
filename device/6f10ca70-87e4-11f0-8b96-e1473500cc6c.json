@@ -1,0 +1,231 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "7a28cef0-3b07-11f0-9464-dd129eb04c6d"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "6f10ca70-87e4-11f0-8b96-e1473500cc6c"
+    },
+    "label" : "",
+    "name" : "Tb-Gateway",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "rqDE8KHGIoTqvsfVqlwP",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f10ca70-87e4-11f0-8b96-e1473500cc6c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "99360cb0-8e66-11f0-a1aa-d709ca5e32a7"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 7446193
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f10ca70-87e4-11f0-8b96-e1473500cc6c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "9951d210-8e66-11f0-8b96-e1473500cc6c"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 7446195
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f10ca70-87e4-11f0-8b96-e1473500cc6c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "cc087c20-8e63-11f0-a1aa-d709ca5e32a7"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 7445872
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f10ca70-87e4-11f0-8b96-e1473500cc6c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "cdb51520-930d-11f0-8b96-e1473500cc6c"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 7680884
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f10ca70-87e4-11f0-8b96-e1473500cc6c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "4ecec590-8e7f-11f0-bb9a-7b2f4402cc46"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 7449794
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"mode\":\"basic\",\"name\":\"EMS-OPCUA\",\"type\":\"opcua\",\"enableRemoteLogging\":false,\"logLevel\":\"DEBUG\",\"configuration\":\"emsOpcua.json\",\"configurationJson\":{\"name\":\"EMS-OPCUA\",\"id\":\"7e60aa74-f66f-4b46-bd30-36d1c6c91171\",\"server\":{\"url\":\"opc.tcp://192.168.200.50:48010\",\"timeoutInMillis\":10000,\"scanPeriodInMillis\":5000,\"pollPeriodInMillis\":5000,\"enableSubscriptions\":false,\"subCheckPeriodInMillis\":10000,\"showMap\":false,\"security\":\"None\",\"identity\":{\"type\":\"anonymous\"}},\"mapping\":[{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"Electolyseur\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"temperature\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Electrolyseur_Temperature}\"},{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Electrolyseur_ModeAuto}\"},{\"key\":\"rendementElectrique\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Electrolyseur_RendementElectrique}\"},{\"key\":\"rendementChaleur\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Electrolyseur_RendementChaleur}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"Batterie\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Batterie_ModeAuto}\"},{\"key\":\"stockage\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Batterie_Stockage}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"Chaudiere\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Chaudiere_ModeAuto}\"},{\"key\":\"pression\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Chaudiere_Pression}\"},{\"key\":\"rendementChaleur\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Chaudiere_RendementChaleur}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"Distribution\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Distribution_ModeAuto}\"},{\"key\":\"frequence\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Distribution_Frequence}\"},{\"key\":\"puissance\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Distribution_Puissance}\"},{\"key\":\"temperature\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Distribution_Temperature}\"},{\"key\":\"tension\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Distribution_Tension}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"MicroTurbine\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_MicroTurbine_ModeAuto}\"},{\"key\":\"rendementChaleur\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_MicroTurbine_RendementChaleur}\"},{\"key\":\"rendementElectrique\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_MicroTurbine_RendementElectrique}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"PileCombustible\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_PileCombustible_ModeAuto}\"},{\"key\":\"puissance\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_PileCombustible_Puissance}\"},{\"key\":\"rendementChaleur\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_PileCombustible_RendementChaleur}\"},{\"key\":\"rendementElectrique\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_PileCombustible_RendementElectrique}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"SolarPanel\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"production\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_SolarPanel_Production}\"},{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_SolarPanel_ModeAuto}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"StationRecharge\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StationRecharge_ModeAuto}\"},{\"key\":\"puissance\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StationRecharge_Puissance}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"StockageBP\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageBP_ModeAuto}\"},{\"key\":\"debit\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageBP_Debit}\"},{\"key\":\"pression\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageBP_Pression}\"},{\"key\":\"temperature\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageBP_Temperature}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"StockageHP\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageHP_ModeAuto}\"},{\"key\":\"debit\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageHP_Debit}\"},{\"key\":\"pression\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageHP_Pression}\"},{\"key\":\"temperature\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageHP_Temperature}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"StockageThermique\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[],\"timeseries\":[{\"key\":\"modeAuto\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageThermique_ModeAuto}\"},{\"key\":\"rendement\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageThermique_Rendement}\"},{\"key\":\"stockage\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_StockageThermique_Stockage}\"}],\"rpc_methods\":[],\"attributes_updates\":[]},{\"deviceNodeSource\":\"path\",\"deviceNodePattern\":\"Root\\\\.Objects\\\\.BD-Resa\",\"deviceInfo\":{\"deviceNameExpression\":\"Test\",\"deviceNameExpressionSource\":\"constant\",\"deviceProfileExpressionSource\":\"constant\",\"deviceProfileExpression\":\"default\"},\"attributes\":[{\"key\":\"AICommande\",\"type\":\"path\",\"value\":\"${ns=2;s=EMS_Test_AICommande}\"}],\"timeseries\":[{\"key\":\"commande\",\"type\":\"identifier\",\"value\":\"${ns=2;s=EMS_Test_Commande}\"}],\"rpc_methods\":[],\"attributes_updates\":[]}],\"logLevel\":\"DEBUG\",\"enableRemoteLogging\":false,\"configVersion\":\"3.7.6\"},\"configVersion\":\"3.7.6\",\"ts\":1758104100149}",
+      "key" : "EMS-OPCUA",
+      "lastUpdateTs" : 1758104100518,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1758099955843,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"EMS-OPCUA\"]",
+      "key" : "inactive_connectors",
+      "lastUpdateTs" : 1758104100481,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1758093813316,
+      "longValue" : 1758093813315,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1758106502834,
+      "longValue" : 1758106500817,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1758103977080,
+      "longValue" : 1758103977080,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1758103972829,
+      "longValue" : 1758103972829,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "RemoteLoggingLevel",
+      "lastUpdateTs" : 1758103952078,
+      "longValue" : null,
+      "strValue" : "DEBUG"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[]",
+      "key" : "active_connectors",
+      "lastUpdateTs" : 1758104100474,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"host\":\"mqtt.eu.thingsboard.cloud\",\"port\":1883,\"remoteShell\":false,\"remoteConfiguration\":true,\"checkConnectorsConfigurationInSeconds\":60,\"statistics\":{\"enable\":false,\"enableCustom\":false,\"statsSendPeriodInSeconds\":60,\"customStatsSendPeriodInSeconds\":3600,\"commands\":[]},\"maxPayloadSizeBytes\":8196,\"minPackSendDelayMS\":50,\"minPackSizeToSend\":500,\"handleDeviceRenaming\":true,\"checkingDeviceActivity\":{\"checkDeviceInactivity\":true,\"inactivityTimeoutSeconds\":20,\"inactivityCheckPeriodSeconds\":5},\"security\":{\"type\":\"accessToken\",\"accessToken\":\"rqDE8KHGIoTqvsfVqlwP\"},\"qos\":1,\"reportStrategy\":{\"type\":\"ON_RECEIVED\",\"reportPeriod\":10000,\"ttl\":86400},\"ts\":1758103952038}",
+      "key" : "general_configuration",
+      "lastUpdateTs" : 1758103952078,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"enabled\":false,\"serverPort\":9595,\"keepAliveTimeMs\":10001,\"keepAliveTimeoutMs\":5000,\"keepAlivePermitWithoutCalls\":true,\"maxPingsWithoutData\":0,\"minTimeBetweenPingsMs\":10000,\"minPingIntervalWithoutDataMs\":5000,\"ts\":1758103952038}",
+      "key" : "grpc_configuration",
+      "lastUpdateTs" : 1758103952078,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"version\":1,\"disable_existing_loggers\":false,\"formatters\":{\"LogFormatter\":{\"class\":\"logging.Formatter\",\"format\":\"%(asctime)s.%(msecs)03d - |%(levelname)s| - [%(filename)s] - %(module)s - %(funcName)s - %(lineno)d - %(message)s\",\"datefmt\":\"%Y-%m-%d %H:%M:%S\"}},\"handlers\":{\"consoleHandler\":{\"class\":\"logging.StreamHandler\",\"formatter\":\"LogFormatter\",\"level\":0,\"stream\":\"ext://sys.stdout\"},\"serviceHandler\":{\"class\":\"thingsboard_gateway.tb_utility.tb_rotating_file_handler.TimedRotatingFileHandler\",\"formatter\":\"LogFormatter\",\"filename\":\"./logs/service.log\",\"backupCount\":7,\"interval\":3,\"when\":\"D\",\"encoding\":\"utf-8\"},\"connectorHandler\":{\"class\":\"thingsboard_gateway.tb_utility.tb_rotating_file_handler.TimedRotatingFileHandler\",\"formatter\":\"LogFormatter\",\"filename\":\"./logs/connector.log\",\"backupCount\":7,\"interval\":3,\"when\":\"D\",\"encoding\":\"utf-8\"},\"converterHandler\":{\"class\":\"thingsboard_gateway.tb_utility.tb_rotating_file_handler.TimedRotatingFileHandler\",\"formatter\":\"LogFormatter\",\"filename\":\"./logs/converter.log\",\"backupCount\":7,\"interval\":3,\"when\":\"D\",\"encoding\":\"utf-8\"},\"tb_connectionHandler\":{\"class\":\"thingsboard_gateway.tb_utility.tb_rotating_file_handler.TimedRotatingFileHandler\",\"formatter\":\"LogFormatter\",\"filename\":\"./logs/tb_connection.log\",\"backupCount\":7,\"interval\":3,\"when\":\"D\",\"encoding\":\"utf-8\"},\"storageHandler\":{\"class\":\"thingsboard_gateway.tb_utility.tb_rotating_file_handler.TimedRotatingFileHandler\",\"formatter\":\"LogFormatter\",\"filename\":\"./logs/storage.log\",\"backupCount\":7,\"interval\":3,\"when\":\"D\",\"encoding\":\"utf-8\"},\"extensionHandler\":{\"class\":\"thingsboard_gateway.tb_utility.tb_rotating_file_handler.TimedRotatingFileHandler\",\"formatter\":\"LogFormatter\",\"filename\":\"./logs/extension.log\",\"backupCount\":7,\"interval\":3,\"when\":\"D\",\"encoding\":\"utf-8\"}},\"loggers\":{\"service\":{\"handlers\":[\"serviceHandler\",\"consoleHandler\"],\"level\":\"INFO\",\"propagate\":false},\"connector\":{\"handlers\":[\"connectorHandler\",\"consoleHandler\"],\"level\":\"INFO\",\"propagate\":false},\"converter\":{\"handlers\":[\"converterHandler\",\"consoleHandler\"],\"level\":\"INFO\",\"propagate\":false},\"tb_connection\":{\"handlers\":[\"tb_connectionHandler\",\"consoleHandler\"],\"level\":\"INFO\",\"propagate\":false},\"storage\":{\"handlers\":[\"storageHandler\",\"consoleHandler\"],\"level\":\"INFO\",\"propagate\":false},\"extension\":{\"handlers\":[\"extensionHandler\",\"consoleHandler\"],\"level\":\"INFO\",\"propagate\":false}},\"root\":{\"level\":\"ERROR\",\"handlers\":[\"consoleHandler\"]},\"ts\":1758103952038}",
+      "key" : "logs_configuration",
+      "lastUpdateTs" : 1758103952078,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "mode",
+      "lastUpdateTs" : 1758103952078,
+      "longValue" : null,
+      "strValue" : "basic"
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "setAuto",
+      "lastUpdateTs" : 1757601228908,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"type\":\"memory\",\"read_records_count\":100,\"max_records_count\":100000,\"data_folder_path\":\"./data/\",\"max_file_count\":10,\"max_read_records_count\":10,\"max_records_per_file\":10000,\"data_file_path\":\"./data/data.db\",\"messages_ttl_check_in_hours\":1,\"messages_ttl_in_days\":7,\"ts\":1758103952038}",
+      "key" : "storage_configuration",
+      "lastUpdateTs" : 1758103952078,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  },
+  "calculatedFields" : [ ]
+}

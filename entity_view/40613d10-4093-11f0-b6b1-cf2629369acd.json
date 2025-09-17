@@ -1,0 +1,41 @@
+{
+  "entityType" : "ENTITY_VIEW",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "endTimeMs" : 0,
+    "entityId" : {
+      "entityType" : "DEVICE",
+      "id" : "2b88f250-4072-11f0-b971-355c7b7ccee6"
+    },
+    "externalId" : {
+      "entityType" : "ENTITY_VIEW",
+      "id" : "40613d10-4093-11f0-b6b1-cf2629369acd"
+    },
+    "keys" : {
+      "attributes" : {
+        "cs" : null,
+        "sh" : null,
+        "ss" : null
+      },
+      "timeseries" : null
+    },
+    "name" : "EntityElectrolyseur",
+    "startTimeMs" : 0,
+    "type" : "TypeEntityElectrolyseur",
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "id" : {
+      "entityType" : "ENTITY_VIEW",
+      "id" : "40613d10-4093-11f0-b6b1-cf2629369acd"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
