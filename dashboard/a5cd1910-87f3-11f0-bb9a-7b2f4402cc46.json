@@ -1080,67 +1080,6 @@
           "col" : 0,
           "id" : "8bcc1332-6125-c847-14db-6aa630501ff8"
         },
-        "13abe774-5438-d2ef-ce6e-781a1e7d6ad3" : {
-          "typeFullFqn" : "system.control_widgets.led_indicator",
-          "type" : "rpc",
-          "sizeX" : 2.5,
-          "sizeY" : 2.5,
-          "config" : {
-            "targetDeviceAliases" : [ ],
-            "showTitle" : false,
-            "backgroundColor" : "#E6E7E800",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "title" : "",
-              "ledColor" : "#4caf50",
-              "initialValue" : true,
-              "performCheckStatus" : false,
-              "retrieveValueMethod" : "timeseries",
-              "checkStatusMethod" : "checkStatus",
-              "valueAttribute" : "modeAuto",
-              "parseValueFunction" : "if (data >= 1) return true;\nif (data == 0) return false;",
-              "requestTimeout" : 500,
-              "requestPersistent" : false,
-              "persistentPollingInterval" : 5000
-            },
-            "title" : "Manuel",
-            "dropShadow" : false,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "useDashboardTimewindow" : true,
-            "showLegend" : false,
-            "actions" : { },
-            "decimals" : 2,
-            "datasources" : [ ],
-            "targetDevice" : {
-              "type" : "device",
-              "deviceId" : "9951d210-8e66-11f0-8b96-e1473500cc6c"
-            },
-            "enableDataExport" : true,
-            "margin" : "0",
-            "borderRadius" : "0",
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "titleFont" : {
-              "size" : 5,
-              "sizeUnit" : "px",
-              "family" : null,
-              "weight" : null,
-              "style" : null
-            },
-            "showTitleIcon" : false,
-            "titleTooltip" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "13abe774-5438-d2ef-ce6e-781a1e7d6ad3"
-        },
         "5d07196b-f9d9-8cd5-9037-cc8be5e62915" : {
           "typeFullFqn" : "system.cards.value_card",
           "type" : "latest",
@@ -1319,20 +1258,20 @@
           "col" : 0,
           "id" : "5d07196b-f9d9-8cd5-9037-cc8be5e62915"
         },
-        "23fa1f61-571c-2dd3-9f85-4cdaa867c7cd" : {
-          "typeFullFqn" : "system.value_stepper",
+        "51a06bea-14e2-c664-5e8b-c2b8f09d8f01" : {
+          "typeFullFqn" : "system.single_switch",
           "type" : "rpc",
           "sizeX" : 3.5,
-          "sizeY" : 2,
+          "sizeY" : 1,
           "config" : {
-            "showTitle" : true,
+            "showTitle" : false,
             "backgroundColor" : "#ffffff",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
             "settings" : {
               "initialState" : {
                 "action" : "DO_NOTHING",
-                "defaultValue" : 0,
+                "defaultValue" : false,
                 "executeRpc" : {
                   "method" : "getState",
                   "requestTimeout" : 5000,
@@ -1352,7 +1291,50 @@
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return integer value */\nreturn data;"
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "compareToValue" : true
+                }
+              },
+              "onUpdateState" : {
+                "action" : "SET_ATTRIBUTE",
+                "executeRpc" : {
+                  "method" : "setState",
+                  "requestTimeout" : 5000,
+                  "requestPersistent" : false,
+                  "persistentPollingInterval" : 1000
+                },
+                "setAttribute" : {
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "StrCommande"
+                },
+                "putTimeSeries" : {
+                  "key" : "state"
+                },
+                "valueToData" : {
+                  "type" : "CONSTANT",
+                  "constantValue" : "TESTON",
+                  "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */\nreturn value;"
+                }
+              },
+              "offUpdateState" : {
+                "action" : "SET_ATTRIBUTE",
+                "executeRpc" : {
+                  "method" : "setState",
+                  "requestTimeout" : 5000,
+                  "requestPersistent" : false,
+                  "persistentPollingInterval" : 1000
+                },
+                "setAttribute" : {
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "StrCommande"
+                },
+                "putTimeSeries" : {
+                  "key" : "state"
+                },
+                "valueToData" : {
+                  "type" : "CONSTANT",
+                  "constantValue" : "TESTOFF",
+                  "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */ \n return value;"
                 }
               },
               "disabledState" : {
@@ -1375,93 +1357,52 @@
                   "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                 }
               },
-              "leftButtonClick" : {
-                "action" : "SET_ATTRIBUTE",
-                "executeRpc" : {
-                  "method" : "setState",
-                  "requestTimeout" : 5000,
-                  "requestPersistent" : false,
-                  "persistentPollingInterval" : 1000
-                },
-                "setAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "setCommande"
-                },
-                "putTimeSeries" : {
-                  "key" : "state"
-                },
-                "valueToData" : {
-                  "type" : "VALUE",
-                  "constantValue" : 0,
-                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value;"
-                }
+              "layout" : "right",
+              "autoScale" : true,
+              "showLabel" : true,
+              "label" : "Switch",
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 16,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500",
+                "lineHeight" : "24px"
               },
-              "rightButtonClick" : {
-                "action" : "SET_ATTRIBUTE",
-                "executeRpc" : {
-                  "method" : "setState",
-                  "requestTimeout" : 5000,
-                  "requestPersistent" : false,
-                  "persistentPollingInterval" : 1000
-                },
-                "setAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "setCommande"
-                },
-                "putTimeSeries" : {
-                  "key" : "state"
-                },
-                "valueToData" : {
-                  "type" : "VALUE",
-                  "constantValue" : 0,
-                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value;"
-                }
+              "labelColor" : "rgba(0, 0, 0, 0.76)",
+              "showIcon" : false,
+              "iconSize" : 24,
+              "iconSizeUnit" : "px",
+              "icon" : "mdi:lightbulb-outline",
+              "iconColor" : "rgba(0, 0, 0, 0.76)",
+              "switchColorOn" : "var(--tb-primary-500)",
+              "switchColorOff" : "var(--tb-primary-100)",
+              "switchColorDisabled" : "#D5D7E5",
+              "tumblerColorOn" : "#fff",
+              "tumblerColorOff" : "#fff",
+              "tumblerColorDisabled" : "#fff",
+              "showOnLabel" : false,
+              "onLabel" : "On",
+              "onLabelFont" : {
+                "family" : "Roboto",
+                "size" : 16,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "400",
+                "lineHeight" : "24px"
               },
-              "appearance" : {
-                "type" : "simplified",
-                "autoScale" : true,
-                "minValueRange" : -100,
-                "maxValueRange" : 100,
-                "valueStep" : 0.5,
-                "showValueBox" : true,
-                "valueUnits" : "",
-                "valueDecimals" : 1,
-                "valueFont" : {
-                  "family" : "Roboto",
-                  "weight" : "500",
-                  "style" : "normal",
-                  "size" : 16,
-                  "sizeUnit" : "px",
-                  "lineHeight" : "24px"
-                },
-                "valueColor" : "#000",
-                "valueBoxBackground" : "rgba(0, 0, 0, 0.04)",
-                "showBorder" : true,
-                "borderWidth" : 1,
-                "borderColor" : "#00695C"
+              "onLabelColor" : "rgba(0, 0, 0, 0.38)",
+              "showOffLabel" : false,
+              "offLabel" : "Off",
+              "offLabelFont" : {
+                "family" : "Roboto",
+                "size" : 16,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "400",
+                "lineHeight" : "24px"
               },
-              "buttonAppearance" : {
-                "leftButton" : {
-                  "showButton" : true,
-                  "icon" : "arrow_back_ios_new",
-                  "iconSize" : 24,
-                  "iconSizeUnit" : "px",
-                  "mainColorOn" : "#00695C",
-                  "backgroundColorOn" : "#FFFFFF",
-                  "mainColorDisabled" : "rgba(0,0,0,0.12)",
-                  "backgroundColorDisabled" : "#FFFFFF"
-                },
-                "rightButton" : {
-                  "showButton" : true,
-                  "icon" : "arrow_forward_ios",
-                  "iconSize" : 24,
-                  "iconSizeUnit" : "px",
-                  "mainColorOn" : "#00695C",
-                  "backgroundColorOn" : "#FFFFFF",
-                  "mainColorDisabled" : "rgba(0,0,0,0.12)",
-                  "backgroundColorDisabled" : "#FFFFFF"
-                }
-              },
+              "offLabelColor" : "rgba(0, 0, 0, 0.38)",
               "background" : {
                 "type" : "color",
                 "color" : "#fff",
@@ -1471,9 +1412,9 @@
                   "blur" : 3
                 }
               },
-              "padding" : "12px"
+              "padding" : ""
             },
-            "title" : "Value stepper",
+            "title" : "Single Switch",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
@@ -1481,12 +1422,12 @@
             "widgetCss" : "",
             "noDataDisplayMessage" : "",
             "titleFont" : {
-              "size" : 16,
+              "size" : 12,
               "sizeUnit" : "px",
               "family" : null,
-              "weight" : "500",
+              "weight" : null,
               "style" : null,
-              "lineHeight" : "24px"
+              "lineHeight" : "1.6"
             },
             "showTitleIcon" : false,
             "titleTooltip" : "",
@@ -1499,17 +1440,16 @@
             "iconColor" : "rgba(0, 0, 0, 0.87)",
             "iconSize" : "14px",
             "configMode" : "basic",
-            "titleColor" : "rgba(0, 0, 0, 0.87)",
             "datasources" : [ ],
-            "borderRadius" : null,
             "targetDevice" : {
               "type" : "device",
-              "deviceId" : "cdb51520-930d-11f0-8b96-e1473500cc6c"
-            }
+              "deviceId" : "ae982df0-9487-11f0-8843-15f6bb7fd0a4"
+            },
+            "borderRadius" : null
           },
           "row" : 0,
           "col" : 0,
-          "id" : "23fa1f61-571c-2dd3-9f85-4cdaa867c7cd"
+          "id" : "51a06bea-14e2-c664-5e8b-c2b8f09d8f01"
         }
       },
       "states" : {
@@ -1572,24 +1512,17 @@
                   "row" : 0,
                   "col" : 32
                 },
-                "13abe774-5438-d2ef-ce6e-781a1e7d6ad3" : {
-                  "sizeX" : 1,
-                  "sizeY" : 1,
-                  "resizable" : true,
-                  "row" : 6,
-                  "col" : 33
-                },
                 "5d07196b-f9d9-8cd5-9037-cc8be5e62915" : {
                   "sizeX" : 7,
                   "sizeY" : 7,
                   "row" : 14,
                   "col" : 0
                 },
-                "23fa1f61-571c-2dd3-9f85-4cdaa867c7cd" : {
+                "51a06bea-14e2-c664-5e8b-c2b8f09d8f01" : {
                   "sizeX" : 8,
-                  "sizeY" : 5,
-                  "row" : 9,
-                  "col" : 36
+                  "sizeY" : 2,
+                  "row" : 10,
+                  "col" : 34
                 }
               },
               "gridSettings" : {
@@ -1619,7 +1552,7 @@
             "type" : "entityList",
             "resolveMultiple" : true,
             "entityType" : "DEVICE",
-            "entityList" : [ "2b88f250-4072-11f0-b971-355c7b7ccee6", "dbd03470-4072-11f0-b971-355c7b7ccee6", "e9531130-4072-11f0-90ac-c38ddc901b1d" ]
+            "entityList" : [ "afa50170-9534-11f0-99e0-6968181c2fd2", "dbd03470-4072-11f0-b971-355c7b7ccee6", "e9531130-4072-11f0-90ac-c38ddc901b1d" ]
           }
         }
       },
@@ -1679,7 +1612,10 @@
     "resources" : null,
     "assignedCustomers" : null,
     "customerId" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "a5cd1910-87f3-11f0-bb9a-7b2f4402cc46"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "a5cd1910-87f3-11f0-bb9a-7b2f4402cc46"
