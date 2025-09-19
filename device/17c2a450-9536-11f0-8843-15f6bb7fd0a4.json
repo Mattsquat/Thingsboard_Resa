@@ -20,23 +20,20 @@
       "entityType" : "DEVICE_PROFILE",
       "id" : "7a28cef0-3b07-11f0-9464-dd129eb04c6d"
     },
-    "externalId" : {
-      "entityType" : "DEVICE",
-      "id" : "cdb51520-930d-11f0-8b96-e1473500cc6c"
-    },
+    "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "cdb51520-930d-11f0-8b96-e1473500cc6c"
+      "id" : "17c2a450-9536-11f0-8843-15f6bb7fd0a4"
     },
     "label" : null,
-    "name" : "Test",
+    "name" : "Electrolyseur",
     "ownerId" : null,
     "softwareId" : null,
     "type" : "default"
   },
   "credentials" : {
-    "credentialsId" : "1bECio5Ec609yZQyD3jP",
+    "credentialsId" : "OFOh1L9NeXOY2mo6aSMZ",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -48,36 +45,20 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "cdb51520-930d-11f0-8b96-e1473500cc6c"
+      "id" : "17c2a450-9536-11f0-8843-15f6bb7fd0a4"
     },
     "type" : "Created",
     "typeGroup" : "COMMON",
-    "version" : 7816947
+    "version" : 7817276
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "StrCommande",
-      "lastUpdateTs" : 1758199061735,
-      "longValue" : null,
-      "strValue" : "TEST OFF"
-    }, {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1758104742661,
+      "lastUpdateTs" : 1758272000865,
       "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1758104742655,
-      "longValue" : 1758104742654,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -85,42 +66,26 @@
       "jsonValue" : null,
       "key" : "lastActivityTime",
       "lastUpdateTs" : 1758274190840,
-      "longValue" : 1758274189964,
+      "longValue" : 1758274189521,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1758274189912,
-      "longValue" : 1758274189912,
+      "lastUpdateTs" : 1758274189489,
+      "longValue" : 1758274189489,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1758274185552,
-      "longValue" : 1758274185552,
+      "lastUpdateTs" : 1758274185522,
+      "longValue" : 1758274185522,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "StrCommande",
-      "lastUpdateTs" : 1758273765190,
-      "longValue" : null,
-      "strValue" : "TESTON"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "setCommande",
-      "lastUpdateTs" : 1758042736989,
-      "longValue" : 5,
-      "strValue" : null
-    } ]
+    "SHARED_SCOPE" : [ ]
   },
   "calculatedFields" : [ ]
 }

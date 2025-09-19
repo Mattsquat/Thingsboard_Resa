@@ -17,7 +17,7 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "1cfb6d10-84b2-11f0-a1aa-d709ca5e32a7",
+              "deviceId" : "aff0d780-9534-11f0-99e0-6968181c2fd2",
               "dataKeys" : [ {
                 "name" : "temperature",
                 "type" : "timeseries",
@@ -107,7 +107,7 @@
               "latestDataKeys" : [ ]
             }, {
               "type" : "device",
-              "deviceId" : "1d10c9d0-84b2-11f0-a1aa-d709ca5e32a7",
+              "deviceId" : "affac290-9534-11f0-99e0-6968181c2fd2",
               "dataKeys" : [ {
                 "name" : "temperature",
                 "type" : "timeseries",
@@ -196,7 +196,7 @@
               "latestDataKeys" : [ ]
             }, {
               "type" : "device",
-              "deviceId" : "cc087c20-8e63-11f0-a1aa-d709ca5e32a7",
+              "deviceId" : "17c2a450-9536-11f0-8843-15f6bb7fd0a4",
               "dataKeys" : [ {
                 "name" : "temperature",
                 "type" : "timeseries",
@@ -290,7 +290,7 @@
               "hideTimezone" : false,
               "selectedTab" : 1,
               "realtime" : {
-                "realtimeType" : 0,
+                "realtimeType" : 1,
                 "interval" : 10000,
                 "timewindowMs" : 1800000,
                 "quickInterval" : "CURRENT_HOUR",
@@ -310,7 +310,7 @@
                 "hideQuickInterval" : false
               },
               "aggregation" : {
-                "type" : "AVG",
+                "type" : "NONE",
                 "limit" : 25000
               },
               "timezone" : "Europe/Brussels"
@@ -553,7 +553,7 @@
             "enableFullscreen" : true,
             "titleStyle" : null,
             "mobileHeight" : null,
-            "configMode" : "advanced",
+            "configMode" : "basic",
             "actions" : { },
             "showTitleIcon" : true,
             "titleIcon" : "thermostat",
@@ -2932,67 +2932,6 @@
           "col" : 0,
           "id" : "45011ef4-7a81-716e-de4b-9855d184572f"
         },
-        "3976ec0b-0a58-74a3-9bf7-a52cb2d69b26" : {
-          "typeFullFqn" : "system.control_widgets.led_indicator",
-          "type" : "rpc",
-          "sizeX" : 2.5,
-          "sizeY" : 2.5,
-          "config" : {
-            "targetDeviceAliases" : [ ],
-            "showTitle" : false,
-            "backgroundColor" : "#E6E7E800",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "title" : "EMS",
-              "ledColor" : "hsl(122, 78%, 46%)",
-              "initialValue" : true,
-              "performCheckStatus" : false,
-              "retrieveValueMethod" : "timeseries",
-              "checkStatusMethod" : "checkStatus",
-              "valueAttribute" : "HB",
-              "parseValueFunction" : "if (data >= 1) return true;\nif (data == 0) return false;",
-              "requestTimeout" : 500,
-              "requestPersistent" : false,
-              "persistentPollingInterval" : 5000
-            },
-            "title" : "HeartBeat",
-            "dropShadow" : false,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "useDashboardTimewindow" : true,
-            "showLegend" : false,
-            "actions" : { },
-            "decimals" : 2,
-            "datasources" : [ ],
-            "targetDevice" : {
-              "type" : "device",
-              "deviceId" : "d67f2880-407e-11f0-bdec-dd129eb04c6d"
-            },
-            "enableDataExport" : true,
-            "margin" : "0",
-            "borderRadius" : "0",
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "titleFont" : {
-              "size" : 10,
-              "sizeUnit" : "px",
-              "family" : null,
-              "weight" : null,
-              "style" : null
-            },
-            "showTitleIcon" : false,
-            "titleTooltip" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "3976ec0b-0a58-74a3-9bf7-a52cb2d69b26"
-        },
         "717218a4-3aa5-8101-eca9-bca31171bbf8" : {
           "typeFullFqn" : "system.home_page_widgets.quick_links",
           "type" : "static",
@@ -3284,6 +3223,67 @@
           "row" : 0,
           "col" : 0,
           "id" : "8bcc1332-6125-c847-14db-6aa630501ff8"
+        },
+        "3ddb614f-e33d-c031-cd2a-26c02ede5e8f" : {
+          "typeFullFqn" : "system.control_widgets.led_indicator",
+          "type" : "rpc",
+          "sizeX" : 2.5,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#E6E7E800",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "EMS",
+              "ledColor" : "hsl(122, 78%, 46%)",
+              "initialValue" : true,
+              "performCheckStatus" : false,
+              "retrieveValueMethod" : "attribute",
+              "checkStatusMethod" : "checkStatus",
+              "valueAttribute" : "active_connectors",
+              "parseValueFunction" : "if (Array.isArray(data) && data.includes(\"EMS-OPCUA\")) {\r\n    return true;\r\n}\r\nelse return false;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false,
+              "persistentPollingInterval" : 5000
+            },
+            "title" : "HeartBeat",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDevice" : {
+              "type" : "device",
+              "deviceId" : "d22fc580-9486-11f0-8843-15f6bb7fd0a4"
+            },
+            "enableDataExport" : true,
+            "margin" : "0",
+            "borderRadius" : "0",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "titleFont" : {
+              "size" : 10,
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : null,
+              "style" : null
+            },
+            "showTitleIcon" : false,
+            "titleTooltip" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "3ddb614f-e33d-c031-cd2a-26c02ede5e8f"
         }
       },
       "states" : {
@@ -3338,17 +3338,10 @@
                   "col" : 31
                 },
                 "45011ef4-7a81-716e-de4b-9855d184572f" : {
-                  "sizeX" : 36,
+                  "sizeX" : 60,
                   "sizeY" : 8,
                   "row" : 27,
                   "col" : 0
-                },
-                "3976ec0b-0a58-74a3-9bf7-a52cb2d69b26" : {
-                  "sizeX" : 2,
-                  "sizeY" : 2,
-                  "resizable" : true,
-                  "row" : 0,
-                  "col" : 56
                 },
                 "717218a4-3aa5-8101-eca9-bca31171bbf8" : {
                   "sizeX" : 19,
@@ -3367,6 +3360,13 @@
                   "sizeY" : 2,
                   "row" : 0,
                   "col" : 32
+                },
+                "3ddb614f-e33d-c031-cd2a-26c02ede5e8f" : {
+                  "sizeX" : 2,
+                  "sizeY" : 2,
+                  "resizable" : true,
+                  "row" : 0,
+                  "col" : 56
                 }
               },
               "gridSettings" : {
@@ -3396,7 +3396,7 @@
             "type" : "entityList",
             "resolveMultiple" : true,
             "entityType" : "DEVICE",
-            "entityList" : [ "2b88f250-4072-11f0-b971-355c7b7ccee6", "dbd03470-4072-11f0-b971-355c7b7ccee6", "e9531130-4072-11f0-90ac-c38ddc901b1d" ]
+            "entityList" : [ "afa50170-9534-11f0-99e0-6968181c2fd2", "dbd03470-4072-11f0-b971-355c7b7ccee6", "e9531130-4072-11f0-90ac-c38ddc901b1d" ]
           }
         }
       },
